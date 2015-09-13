@@ -27,11 +27,11 @@ if (!exists(requiredDataset)) {
 ## Create the scatter ploat of the sub-meter [1-3] (with the desired colors, labels, and legend)
 ## as a png file.
 ##
-png(filename= "plot3.png", bg= "transparent")
+png(filename= "plot3.png", bg= "transparent", width= 480, height= 480)
 plot( householdSubset[,"Date"], householdSubset[,"Sub_metering_1"], type= "l", xlab= "", ylab= "Energy sub metering" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_2"], type= "l", col= "red" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_3"], type= "l", col= "blue" )
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("grey", "red", "blue") , lty= "solid", lwd=2 )
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("gray", "red", "blue") , lty= "solid", lwd=2 )
 
 ##
 ## Save the file

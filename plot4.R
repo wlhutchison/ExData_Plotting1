@@ -26,7 +26,7 @@ if (!exists(requiredDataset)) {
 ##
 ## Open (create) a png file that will be used to hold/display four distinct graphs
 ##
-png(filename= "plot4.png", bg= "transparent")
+png(filename= "plot4.png", bg= "transparent", width= 480, height= 480)
 
 ##
 ## Configure the graphics systems to display the graphs in a 2 x 2 grid
@@ -51,7 +51,7 @@ plot( householdSubset[,"Date"], householdSubset[,"Voltage"], type= "l", xlab= ""
 plot( householdSubset[,"Date"], householdSubset[,"Sub_metering_1"], type= "l", xlab= "", ylab= "Energy sub metering" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_2"], type= "l", col= "red" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_3"], type= "l", col= "blue" )
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("grey", "red", "blue") , lty= "solid", lwd=2 )
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("gray", "red", "blue") , lty= "solid", lwd=2 )
 
 ##
 ## Create the scatter plat of the Global Reactive Power

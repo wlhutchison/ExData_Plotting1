@@ -27,7 +27,7 @@ if (!exists(requiredDataset)) {
 ## Create the scatter plot of the Global Active Power (with the desired colors, and labels)
 ## as a png file.
 ##
-png(filename= "plot2.png", bg= "transparent")
+png(filename= "plot2.png", bg= "transparent", width= 480, height= 480)
 plot( householdSubset[,"Date"], householdSubset[,"Global_active_power"], type= "l", xlab= "", ylab= "Global Active Power (kilowatts)" )
 
 ##
