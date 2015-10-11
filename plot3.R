@@ -28,10 +28,10 @@ if (!exists(requiredDataset)) {
 ## as a png file.
 ##
 png(filename= "plot3.png", bg= "transparent", width= 480, height= 480)
-plot( householdSubset[,"Date"], householdSubset[,"Sub_metering_1"], type= "l", xlab= "", ylab= "Energy sub metering" )
+plot( householdSubset[,"Date"], householdSubset[,"Sub_metering_1"], type= "l", xlab= "", ylab= "Energy sub metering", col="black" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_2"], type= "l", col= "red" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_3"], type= "l", col= "blue" )
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("gray", "red", "blue") , lty= "solid", lwd=2 )
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("black", "red", "blue") , lty= "solid", lwd=2 )
 
 ##
 ## Save the file

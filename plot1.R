@@ -28,7 +28,7 @@ if (!exists(requiredDataset)) {
 ## as a png file.
 ##
 png(filename= "plot1.png", bg= "transparent", width= 480, height= 480)
-hist(householdSubset[,"Global_active_power"],col= "Red", xlab= "Global Active Power(kilowatts)", main= "Global Active Power", freq= T, breaks= 14  )
+hist(householdSubset[,"Global_active_power"],col= "Red", xlab= "Global Active Power (kilowatts)", ylab= "Frequency", main= "Global Active Power", freq= T, breaks= 14  )
 
 ##
 ## Save the file

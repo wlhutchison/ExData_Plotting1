@@ -36,28 +36,28 @@ par(mfrow=c(2,2))
 ## Create the scatter plat of the Global Active Power
 ## as a png file.  Graph will be in Row 1, Column 1
 ##
-plot( householdSubset[,"Date"], householdSubset[,"Global_active_power"], type= "l", xlab= "", ylab= "Global Active Power (kilowatts)" )
+plot( householdSubset[,"Date"], householdSubset[,"Global_active_power"], type= "l", xlab= "", ylab= "Global Active Power" )
 
 ##
 ## Create the scatter plat of the Voltage
 ## as a png file.  Graph will be in Row 1, Column 2
 ##
-plot( householdSubset[,"Date"], householdSubset[,"Voltage"], type= "l", xlab= "", ylab= "Voltage" )
+plot( householdSubset[,"Date"], householdSubset[,"Voltage"], type= "l", xlab= "datetime", ylab= "Voltage" )
 
 ##
 ## Create the scatter ploat of the sub-meter [1-3] (with the desired colors, labels, and legend)
 ## as a png file.  Graph will be in Row 2, Column 1
 ##
-plot( householdSubset[,"Date"], householdSubset[,"Sub_metering_1"], type= "l", xlab= "", ylab= "Energy sub metering" )
+plot( householdSubset[,"Date"], householdSubset[,"Sub_metering_1"], type= "l", xlab= "", ylab= "Energy sub metering", col="black" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_2"], type= "l", col= "red" )
 points( householdSubset[,"Date"], householdSubset[,"Sub_metering_3"], type= "l", col= "blue" )
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("gray", "red", "blue") , lty= "solid", lwd=2 )
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col= c("black", "red", "blue") , lty= "solid", lwd=2 )
 
 ##
 ## Create the scatter plat of the Global Reactive Power
-## as a png file.  Graph will be in Row 1, Column 1
+## as a png file.  Graph will be in Row 2, Column 2
 ##
-plot( householdSubset[,"Date"], householdSubset[,"Global_reactive_power"], type= "l", xlab= "", ylab= "Global Reactive Power (kilowatts)" )
+plot( householdSubset[,"Date"], householdSubset[,"Global_reactive_power"], type= "l", xlab= "datetime", ylab= "Global_reactive_power" )
 
 ##
 ## Save the file
